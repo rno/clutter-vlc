@@ -1,0 +1,693 @@
+clutter-vlc-video-texture.lo: clutter-vlc-video-texture.c \
+  clutter-vlc-video-texture.h /usr/include/glib-2.0/glib-object.h \
+  /usr/include/glib-2.0/gobject/gboxed.h \
+  /usr/include/glib-2.0/gobject/gtype.h /usr/include/glib-2.0/glib.h \
+  /usr/include/glib-2.0/glib/galloca.h \
+  /usr/include/glib-2.0/glib/gtypes.h \
+  /usr/lib/glib-2.0/include/glibconfig.h \
+  /usr/include/glib-2.0/glib/gmacros.h \
+  /usr/lib/gcc/i486-linux-gnu/4.3.2/include/stddef.h \
+  /usr/lib/gcc/i486-linux-gnu/4.3.2/include-fixed/limits.h \
+  /usr/lib/gcc/i486-linux-gnu/4.3.2/include-fixed/syslimits.h \
+  /usr/include/limits.h /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-32.h /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+  /usr/include/bits/posix2_lim.h \
+  /usr/lib/gcc/i486-linux-gnu/4.3.2/include/float.h \
+  /usr/include/glib-2.0/glib/garray.h \
+  /usr/include/glib-2.0/glib/gasyncqueue.h \
+  /usr/include/glib-2.0/glib/gthread.h \
+  /usr/include/glib-2.0/glib/gerror.h /usr/include/glib-2.0/glib/gquark.h \
+  /usr/include/glib-2.0/glib/gutils.h \
+  /usr/lib/gcc/i486-linux-gnu/4.3.2/include/stdarg.h \
+  /usr/include/glib-2.0/glib/gatomic.h \
+  /usr/include/glib-2.0/glib/gbacktrace.h /usr/include/signal.h \
+  /usr/include/bits/sigset.h /usr/include/bits/types.h \
+  /usr/include/bits/typesizes.h /usr/include/bits/signum.h \
+  /usr/include/time.h /usr/include/bits/siginfo.h \
+  /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
+  /usr/include/bits/sigstack.h /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/sigthread.h /usr/include/glib-2.0/glib/gbase64.h \
+  /usr/include/glib-2.0/glib/gbookmarkfile.h /usr/include/bits/time.h \
+  /usr/include/glib-2.0/glib/gcache.h /usr/include/glib-2.0/glib/glist.h \
+  /usr/include/glib-2.0/glib/gmem.h /usr/include/glib-2.0/glib/gslice.h \
+  /usr/include/glib-2.0/glib/gchecksum.h \
+  /usr/include/glib-2.0/glib/gcompletion.h \
+  /usr/include/glib-2.0/glib/gconvert.h \
+  /usr/include/glib-2.0/glib/gdataset.h \
+  /usr/include/glib-2.0/glib/gdate.h /usr/include/glib-2.0/glib/gdir.h \
+  /usr/include/glib-2.0/glib/gfileutils.h \
+  /usr/include/glib-2.0/glib/ghash.h /usr/include/glib-2.0/glib/ghook.h \
+  /usr/include/glib-2.0/glib/giochannel.h \
+  /usr/include/glib-2.0/glib/gmain.h /usr/include/glib-2.0/glib/gslist.h \
+  /usr/include/glib-2.0/glib/gstring.h \
+  /usr/include/glib-2.0/glib/gunicode.h \
+  /usr/include/glib-2.0/glib/gkeyfile.h \
+  /usr/include/glib-2.0/glib/gmappedfile.h \
+  /usr/include/glib-2.0/glib/gmarkup.h \
+  /usr/include/glib-2.0/glib/gmessages.h \
+  /usr/include/glib-2.0/glib/gnode.h /usr/include/glib-2.0/glib/goption.h \
+  /usr/include/glib-2.0/glib/gpattern.h \
+  /usr/include/glib-2.0/glib/gprimes.h \
+  /usr/include/glib-2.0/glib/gqsort.h /usr/include/glib-2.0/glib/gqueue.h \
+  /usr/include/glib-2.0/glib/grand.h /usr/include/glib-2.0/glib/grel.h \
+  /usr/include/glib-2.0/glib/gregex.h \
+  /usr/include/glib-2.0/glib/gscanner.h \
+  /usr/include/glib-2.0/glib/gsequence.h \
+  /usr/include/glib-2.0/glib/gshell.h /usr/include/glib-2.0/glib/gspawn.h \
+  /usr/include/glib-2.0/glib/gstrfuncs.h \
+  /usr/include/glib-2.0/glib/gtestutils.h \
+  /usr/include/glib-2.0/glib/gthreadpool.h \
+  /usr/include/glib-2.0/glib/gtimer.h /usr/include/glib-2.0/glib/gtree.h \
+  /usr/include/glib-2.0/glib/gurifuncs.h \
+  /usr/include/glib-2.0/gobject/genums.h \
+  /usr/include/glib-2.0/gobject/gobject.h \
+  /usr/include/glib-2.0/gobject/gvalue.h \
+  /usr/include/glib-2.0/gobject/gparam.h \
+  /usr/include/glib-2.0/gobject/gclosure.h \
+  /usr/include/glib-2.0/gobject/gsignal.h \
+  /usr/include/glib-2.0/gobject/gmarshal.h \
+  /usr/include/glib-2.0/gobject/gparamspecs.h \
+  /usr/include/glib-2.0/gobject/gsourceclosure.h \
+  /usr/include/glib-2.0/gobject/gtypemodule.h \
+  /usr/include/glib-2.0/gobject/gtypeplugin.h \
+  /usr/include/glib-2.0/gobject/gvaluearray.h \
+  /usr/include/glib-2.0/gobject/gvaluetypes.h \
+  /usr/local/include/clutter-0.9/clutter/clutter.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-actor.h \
+  /usr/include/pango-1.0/pango/pango.h \
+  /usr/include/pango-1.0/pango/pango-attributes.h \
+  /usr/include/pango-1.0/pango/pango-font.h \
+  /usr/include/pango-1.0/pango/pango-coverage.h \
+  /usr/include/pango-1.0/pango/pango-types.h \
+  /usr/include/pango-1.0/pango/pango-gravity.h \
+  /usr/include/pango-1.0/pango/pango-matrix.h \
+  /usr/include/pango-1.0/pango/pango-script.h \
+  /usr/include/pango-1.0/pango/pango-language.h \
+  /usr/include/pango-1.0/pango/pango-bidi-type.h \
+  /usr/include/pango-1.0/pango/pango-break.h \
+  /usr/include/pango-1.0/pango/pango-item.h \
+  /usr/include/pango-1.0/pango/pango-context.h \
+  /usr/include/pango-1.0/pango/pango-fontmap.h \
+  /usr/include/pango-1.0/pango/pango-fontset.h \
+  /usr/include/pango-1.0/pango/pango-engine.h \
+  /usr/include/pango-1.0/pango/pango-glyph.h \
+  /usr/include/pango-1.0/pango/pango-enum-types.h \
+  /usr/include/pango-1.0/pango/pango-features.h \
+  /usr/include/pango-1.0/pango/pango-glyph-item.h \
+  /usr/include/pango-1.0/pango/pango-layout.h \
+  /usr/include/pango-1.0/pango/pango-tabs.h \
+  /usr/include/pango-1.0/pango/pango-renderer.h \
+  /usr/include/pango-1.0/pango/pango-utils.h /usr/include/stdio.h \
+  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h /usr/include/bits/stdio2.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-color.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-fixed.h \
+  /usr/local/include/clutter-0.9/cogl/cogl.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-defines-gl.h \
+  /usr/include/GL/gl.h /usr/include/GL/glext.h /usr/include/inttypes.h \
+  /usr/include/stdint.h /usr/include/bits/wchar.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-vertex-buffer.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-types.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-matrix.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-fixed.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-color.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-offscreen.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-material.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-path.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-shader.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-texture.h \
+  /usr/local/include/clutter-0.9/cogl/cogl-deprecated.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-types.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-units.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-event.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-shader.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-shader-types.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-alpha.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-timeline.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-animatable.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-animation.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-actor.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-alpha.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-interval.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-animation.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-backend.h \
+  /usr/include/cairo/cairo.h /usr/include/cairo/cairo-version.h \
+  /usr/include/cairo/cairo-features.h \
+  /usr/include/cairo/cairo-deprecated.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-stage.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-group.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-feature.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-behaviour-depth.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-behaviour.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-behaviour-ellipse.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-behaviour.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-behaviour-opacity.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-behaviour-path.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-path.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-behaviour-rotate.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-behaviour-scale.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-binding-pool.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-cairo-texture.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-texture.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-child-meta.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-clone.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-color.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-container.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-child-meta.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-deprecated.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-event.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-feature.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-frame-source.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-group.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-interval.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-keysyms.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-list-model.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-model.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-main.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-media.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-model.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-path.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-rectangle.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-score.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-scriptable.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-script.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-json.h \
+  /usr/local/include/clutter-0.9/clutter/json/json-types.h \
+  /usr/local/include/clutter-0.9/clutter/json/json-parser.h \
+  /usr/local/include/clutter-0.9/clutter/json/json-types.h \
+  /usr/local/include/clutter-0.9/clutter/json/json-generator.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-script.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-shader.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-shader-types.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-stage.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-stage-manager.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-texture.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-text.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-timeline.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-timeout-pool.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-types.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-units.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-util.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-version.h \
+  /usr/local/include/clutter-0.9/clutter/clutter-enum-types.h \
+  /usr/local/include/vlc/vlc.h /usr/local/include/vlc/libvlc_structures.h \
+  /usr/local/include/vlc/libvlc_events.h /usr/local/include/vlc/libvlc.h \
+  /usr/local/include/vlc/libvlc_media_list.h \
+  /usr/local/include/vlc/libvlc_vlm.h /usr/local/include/vlc/deprecated.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/endian.h \
+  /usr/include/bits/endian.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/sys/sysmacros.h \
+  /usr/include/alloca.h /usr/include/bits/stdlib.h
+
+clutter-vlc-video-texture.h:
+
+/usr/include/glib-2.0/glib-object.h:
+
+/usr/include/glib-2.0/gobject/gboxed.h:
+
+/usr/include/glib-2.0/gobject/gtype.h:
+
+/usr/include/glib-2.0/glib.h:
+
+/usr/include/glib-2.0/glib/galloca.h:
+
+/usr/include/glib-2.0/glib/gtypes.h:
+
+/usr/lib/glib-2.0/include/glibconfig.h:
+
+/usr/include/glib-2.0/glib/gmacros.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.3.2/include/stddef.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.3.2/include-fixed/limits.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.3.2/include-fixed/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-32.h:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.3.2/include/float.h:
+
+/usr/include/glib-2.0/glib/garray.h:
+
+/usr/include/glib-2.0/glib/gasyncqueue.h:
+
+/usr/include/glib-2.0/glib/gthread.h:
+
+/usr/include/glib-2.0/glib/gerror.h:
+
+/usr/include/glib-2.0/glib/gquark.h:
+
+/usr/include/glib-2.0/glib/gutils.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.3.2/include/stdarg.h:
+
+/usr/include/glib-2.0/glib/gatomic.h:
+
+/usr/include/glib-2.0/glib/gbacktrace.h:
+
+/usr/include/signal.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/signum.h:
+
+/usr/include/time.h:
+
+/usr/include/bits/siginfo.h:
+
+/usr/include/bits/sigaction.h:
+
+/usr/include/bits/sigcontext.h:
+
+/usr/include/bits/sigstack.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/bits/sigthread.h:
+
+/usr/include/glib-2.0/glib/gbase64.h:
+
+/usr/include/glib-2.0/glib/gbookmarkfile.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/glib-2.0/glib/gcache.h:
+
+/usr/include/glib-2.0/glib/glist.h:
+
+/usr/include/glib-2.0/glib/gmem.h:
+
+/usr/include/glib-2.0/glib/gslice.h:
+
+/usr/include/glib-2.0/glib/gchecksum.h:
+
+/usr/include/glib-2.0/glib/gcompletion.h:
+
+/usr/include/glib-2.0/glib/gconvert.h:
+
+/usr/include/glib-2.0/glib/gdataset.h:
+
+/usr/include/glib-2.0/glib/gdate.h:
+
+/usr/include/glib-2.0/glib/gdir.h:
+
+/usr/include/glib-2.0/glib/gfileutils.h:
+
+/usr/include/glib-2.0/glib/ghash.h:
+
+/usr/include/glib-2.0/glib/ghook.h:
+
+/usr/include/glib-2.0/glib/giochannel.h:
+
+/usr/include/glib-2.0/glib/gmain.h:
+
+/usr/include/glib-2.0/glib/gslist.h:
+
+/usr/include/glib-2.0/glib/gstring.h:
+
+/usr/include/glib-2.0/glib/gunicode.h:
+
+/usr/include/glib-2.0/glib/gkeyfile.h:
+
+/usr/include/glib-2.0/glib/gmappedfile.h:
+
+/usr/include/glib-2.0/glib/gmarkup.h:
+
+/usr/include/glib-2.0/glib/gmessages.h:
+
+/usr/include/glib-2.0/glib/gnode.h:
+
+/usr/include/glib-2.0/glib/goption.h:
+
+/usr/include/glib-2.0/glib/gpattern.h:
+
+/usr/include/glib-2.0/glib/gprimes.h:
+
+/usr/include/glib-2.0/glib/gqsort.h:
+
+/usr/include/glib-2.0/glib/gqueue.h:
+
+/usr/include/glib-2.0/glib/grand.h:
+
+/usr/include/glib-2.0/glib/grel.h:
+
+/usr/include/glib-2.0/glib/gregex.h:
+
+/usr/include/glib-2.0/glib/gscanner.h:
+
+/usr/include/glib-2.0/glib/gsequence.h:
+
+/usr/include/glib-2.0/glib/gshell.h:
+
+/usr/include/glib-2.0/glib/gspawn.h:
+
+/usr/include/glib-2.0/glib/gstrfuncs.h:
+
+/usr/include/glib-2.0/glib/gtestutils.h:
+
+/usr/include/glib-2.0/glib/gthreadpool.h:
+
+/usr/include/glib-2.0/glib/gtimer.h:
+
+/usr/include/glib-2.0/glib/gtree.h:
+
+/usr/include/glib-2.0/glib/gurifuncs.h:
+
+/usr/include/glib-2.0/gobject/genums.h:
+
+/usr/include/glib-2.0/gobject/gobject.h:
+
+/usr/include/glib-2.0/gobject/gvalue.h:
+
+/usr/include/glib-2.0/gobject/gparam.h:
+
+/usr/include/glib-2.0/gobject/gclosure.h:
+
+/usr/include/glib-2.0/gobject/gsignal.h:
+
+/usr/include/glib-2.0/gobject/gmarshal.h:
+
+/usr/include/glib-2.0/gobject/gparamspecs.h:
+
+/usr/include/glib-2.0/gobject/gsourceclosure.h:
+
+/usr/include/glib-2.0/gobject/gtypemodule.h:
+
+/usr/include/glib-2.0/gobject/gtypeplugin.h:
+
+/usr/include/glib-2.0/gobject/gvaluearray.h:
+
+/usr/include/glib-2.0/gobject/gvaluetypes.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-actor.h:
+
+/usr/include/pango-1.0/pango/pango.h:
+
+/usr/include/pango-1.0/pango/pango-attributes.h:
+
+/usr/include/pango-1.0/pango/pango-font.h:
+
+/usr/include/pango-1.0/pango/pango-coverage.h:
+
+/usr/include/pango-1.0/pango/pango-types.h:
+
+/usr/include/pango-1.0/pango/pango-gravity.h:
+
+/usr/include/pango-1.0/pango/pango-matrix.h:
+
+/usr/include/pango-1.0/pango/pango-script.h:
+
+/usr/include/pango-1.0/pango/pango-language.h:
+
+/usr/include/pango-1.0/pango/pango-bidi-type.h:
+
+/usr/include/pango-1.0/pango/pango-break.h:
+
+/usr/include/pango-1.0/pango/pango-item.h:
+
+/usr/include/pango-1.0/pango/pango-context.h:
+
+/usr/include/pango-1.0/pango/pango-fontmap.h:
+
+/usr/include/pango-1.0/pango/pango-fontset.h:
+
+/usr/include/pango-1.0/pango/pango-engine.h:
+
+/usr/include/pango-1.0/pango/pango-glyph.h:
+
+/usr/include/pango-1.0/pango/pango-enum-types.h:
+
+/usr/include/pango-1.0/pango/pango-features.h:
+
+/usr/include/pango-1.0/pango/pango-glyph-item.h:
+
+/usr/include/pango-1.0/pango/pango-layout.h:
+
+/usr/include/pango-1.0/pango/pango-tabs.h:
+
+/usr/include/pango-1.0/pango/pango-renderer.h:
+
+/usr/include/pango-1.0/pango/pango-utils.h:
+
+/usr/include/stdio.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+/usr/include/bits/stdio2.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-color.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-fixed.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-defines-gl.h:
+
+/usr/include/GL/gl.h:
+
+/usr/include/GL/glext.h:
+
+/usr/include/inttypes.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-vertex-buffer.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-types.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-matrix.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-fixed.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-color.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-offscreen.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-material.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-path.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-shader.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-texture.h:
+
+/usr/local/include/clutter-0.9/cogl/cogl-deprecated.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-types.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-units.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-event.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-shader.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-shader-types.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-alpha.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-timeline.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-animatable.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-animation.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-actor.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-alpha.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-interval.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-animation.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-backend.h:
+
+/usr/include/cairo/cairo.h:
+
+/usr/include/cairo/cairo-version.h:
+
+/usr/include/cairo/cairo-features.h:
+
+/usr/include/cairo/cairo-deprecated.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-stage.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-group.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-feature.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-behaviour-depth.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-behaviour.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-behaviour-ellipse.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-behaviour.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-behaviour-opacity.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-behaviour-path.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-path.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-behaviour-rotate.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-behaviour-scale.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-binding-pool.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-cairo-texture.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-texture.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-child-meta.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-clone.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-color.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-container.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-child-meta.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-deprecated.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-event.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-feature.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-frame-source.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-group.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-interval.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-keysyms.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-list-model.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-model.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-main.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-media.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-model.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-path.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-rectangle.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-score.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-scriptable.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-script.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-json.h:
+
+/usr/local/include/clutter-0.9/clutter/json/json-types.h:
+
+/usr/local/include/clutter-0.9/clutter/json/json-parser.h:
+
+/usr/local/include/clutter-0.9/clutter/json/json-types.h:
+
+/usr/local/include/clutter-0.9/clutter/json/json-generator.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-script.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-shader.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-shader-types.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-stage.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-stage-manager.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-texture.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-text.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-timeline.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-timeout-pool.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-types.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-units.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-util.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-version.h:
+
+/usr/local/include/clutter-0.9/clutter/clutter-enum-types.h:
+
+/usr/local/include/vlc/vlc.h:
+
+/usr/local/include/vlc/libvlc_structures.h:
+
+/usr/local/include/vlc/libvlc_events.h:
+
+/usr/local/include/vlc/libvlc.h:
+
+/usr/local/include/vlc/libvlc_media_list.h:
+
+/usr/local/include/vlc/libvlc_vlm.h:
+
+/usr/local/include/vlc/deprecated.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/alloca.h:
+
+/usr/include/bits/stdlib.h:

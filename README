@@ -1,0 +1,22 @@
+Clutter-Vlc README
+========================
+
+Clutter-Vlc (clutter-vlc) is an integration library for using Vlc
+with Clutter.
+
+Clutter is an open source software library for creating fast, visually
+rich and animated graphical user interfaces. It uses OpenGL for drawing
+primitives and has multiple backends, allowing its usage on different
+platforms.
+
+
+
+Clutter-Vlc requires:
+
+  GLib >= 2.10.0
+  Clutter >= 0.8.0
+  Vlc >= 0.9.8
+
+Released under the terms of the GNU Lesser General Public License, version 2.1
+or later. See the file COPYING for details.
+
