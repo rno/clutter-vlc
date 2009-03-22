@@ -1,6 +1,7 @@
 source_h = 					\
 	$(srcdir)/clutter-vlc-video-texture.h 	\
 	$(srcdir)/clutter-vlc-main.h 		\
+	$(srcdir)/clutter-vlc-version.h		\
 	$(srcdir)/clutter-vlc.h
 
 
