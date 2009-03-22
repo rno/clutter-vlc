@@ -534,6 +534,5 @@ ClutterActor *
 clutter_vlc_video_texture_new(void)
 {
   return g_object_new(CLUTTER_VLC_TYPE_VIDEO_TEXTURE,
-		      "disable-slicing", TRUE,
 		      NULL);
 }
