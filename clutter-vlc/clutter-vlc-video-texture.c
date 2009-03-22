@@ -26,6 +26,8 @@
 
 #include <stdlib.h>
 
+#define TICK_TIMEOUT 0.5
+
 struct _ClutterVlcVideoTexturePrivate
 {
   libvlc_exception_t vlc_exception;
@@ -33,6 +35,7 @@ struct _ClutterVlcVideoTexturePrivate
   libvlc_media_player_t* vlc_media_player;
 
   gchar* uri;
+  guint tick_timeout_id;
 };
 
 enum {
@@ -81,17 +84,17 @@ clutter_vlc_catch(libvlc_exception_t* vlc_exception)
 }
 
 
-/* static gboolean */
-/* clutter_vlc_tick_timeout(gpointer data) */
-/* { */
-/*   GObject *video_texture; */
+static gboolean
+clutter_vlc_tick_timeout(gpointer data)
+{
+  GObject* self;
 
-/*   video_texture = data; */
+  self = data;
 
-/*   g_object_notify(video_texture, "progress"); */
+  g_object_notify(self, "progress");
 
-/*   return TRUE; */
-/* } */
+  return TRUE;
+}
 
 
 static void
@@ -115,6 +118,8 @@ clutter_vlc_set_uri(ClutterVlcVideoTexture* video_texture,
       clutter_vlc_catch(&priv->vlc_exception);
       libvlc_media_player_release(priv->vlc_media_player);
       priv->vlc_media_player = NULL;
+      g_source_remove(priv->tick_timeout_id);
+      priv->tick_timeout_id = 0;
     }
 
   if (priv->uri != NULL)
@@ -123,26 +128,33 @@ clutter_vlc_set_uri(ClutterVlcVideoTexture* video_texture,
       priv->uri = NULL;
     }
 
-  priv->uri = g_strdup(uri);
-  if (priv->uri == NULL)
-    return;
+  if (uri != NULL)
+    {
+      priv->uri = g_strdup(uri);
+      if (priv->uri == NULL)
+	return;
 
-  vlc_media = libvlc_media_new(priv->vlc_instance,
-			       priv->uri, &priv->vlc_exception);
-  clutter_vlc_catch(&priv->vlc_exception);
+      vlc_media = libvlc_media_new(priv->vlc_instance,
+				   priv->uri, &priv->vlc_exception);
+      clutter_vlc_catch(&priv->vlc_exception);
 
-  sprintf(media_arg, ":clutter-texture=%lld",
-	  (long long int)(intptr_t)CLUTTER_TEXTURE(video_texture));
+      sprintf(media_arg, ":clutter-texture=%lld",
+	      (long long int)(intptr_t)CLUTTER_TEXTURE(video_texture));
 
-  libvlc_media_add_option(vlc_media, media_arg, &priv->vlc_exception);
-  clutter_vlc_catch(&priv->vlc_exception);
+      libvlc_media_add_option(vlc_media, media_arg, &priv->vlc_exception);
+      clutter_vlc_catch(&priv->vlc_exception);
 
-  priv->vlc_media_player =
-    libvlc_media_player_new_from_media(vlc_media,
-				       &priv->vlc_exception);
-  clutter_vlc_catch(&priv->vlc_exception);
+      priv->vlc_media_player =
+	libvlc_media_player_new_from_media(vlc_media,
+					   &priv->vlc_exception);
+      clutter_vlc_catch(&priv->vlc_exception);
 
-  libvlc_media_release(vlc_media);
+      libvlc_media_release(vlc_media);
+
+      priv->tick_timeout_id = g_timeout_add(TICK_TIMEOUT * 1000,
+					    clutter_vlc_tick_timeout,
+					    self);
+    }
 
   g_object_notify(self, "uri");
   g_object_notify(self, "can-seek");
@@ -348,6 +360,9 @@ clutter_vlc_video_texture_dispose(GObject* object)
 
       libvlc_media_player_release(priv->vlc_media_player);
       priv->vlc_media_player = NULL;
+
+      g_source_remove(priv->tick_timeout_id);
+      priv->tick_timeout_id = 0;
     }
 
   if (priv->vlc_instance != NULL)
