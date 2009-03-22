@@ -100,6 +100,7 @@ clutter_vlc_set_uri(ClutterVlcVideoTexture* video_texture,
 {
   ClutterVlcVideoTexturePrivate* priv;
   GObject* self;
+  libvlc_media_t* vlc_media;
 
   priv = video_texture->priv;
   self = G_OBJECT(video_texture);
@@ -116,9 +117,25 @@ clutter_vlc_set_uri(ClutterVlcVideoTexture* video_texture,
     }
 
   if (priv->uri != NULL)
-    g_free(priv->uri);
+    {
+      g_free(priv->uri);
+      priv->uri = NULL;
+    }
 
   priv->uri = g_strdup(uri);
+  if (priv->uri == NULL)
+    return;
+
+  vlc_media = libvlc_media_new(priv->vlc_instance,
+			       priv->uri, &priv->vlc_exception);
+  clutter_vlc_catch(&priv->vlc_exception);
+
+  priv->vlc_media_player =
+    libvlc_media_player_new_from_media(vlc_media,
+				       &priv->vlc_exception);
+  clutter_vlc_catch(&priv->vlc_exception);
+
+  libvlc_media_release(vlc_media);
 
   g_object_notify(self, "uri");
   g_object_notify(self, "can-seek");
@@ -132,7 +149,6 @@ clutter_vlc_set_playing(ClutterVlcVideoTexture* video_texture,
 			gboolean playing)
 {
   ClutterVlcVideoTexturePrivate* priv;
-  libvlc_media_t* vlc_media;
 
   priv = video_texture->priv;
 
@@ -155,17 +171,6 @@ clutter_vlc_set_playing(ClutterVlcVideoTexture* video_texture,
     {
       if (priv->vlc_media_player == NULL)
 	{
-	  vlc_media = libvlc_media_new(priv->vlc_instance,
-				       priv->uri, &priv->vlc_exception);
-	  clutter_vlc_catch(&priv->vlc_exception);
-
-	  priv->vlc_media_player =
-	    libvlc_media_player_new_from_media(vlc_media,
-					       &priv->vlc_exception);
-	  clutter_vlc_catch(&priv->vlc_exception);
-
-	  libvlc_media_release(vlc_media);
-
 	  libvlc_media_player_play(priv->vlc_media_player,
 				   &priv->vlc_exception);
 	  clutter_vlc_catch(&priv->vlc_exception);
