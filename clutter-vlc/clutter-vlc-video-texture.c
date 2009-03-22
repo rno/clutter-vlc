@@ -158,24 +158,20 @@ clutter_vlc_set_playing(ClutterVlcVideoTexture* video_texture,
   if (priv->uri == NULL)
     return;
 
+  if (priv->vlc_media_player == NULL)
+    return;
+
   if (playing == FALSE)
     {
-      if (priv->vlc_media_player != NULL)
-	{
-	  libvlc_media_player_pause(priv->vlc_media_player,
-				    &priv->vlc_exception);
-	  clutter_vlc_catch(&priv->vlc_exception);
-	}
+      libvlc_media_player_pause(priv->vlc_media_player,
+				&priv->vlc_exception);
     }
   else
     {
-      if (priv->vlc_media_player == NULL)
-	{
-	  libvlc_media_player_play(priv->vlc_media_player,
-				   &priv->vlc_exception);
-	  clutter_vlc_catch(&priv->vlc_exception);
-	}
+      libvlc_media_player_play(priv->vlc_media_player,
+			       &priv->vlc_exception);
     }
+  clutter_vlc_catch(&priv->vlc_exception);
 
   g_object_notify(G_OBJECT(video_texture), "playing");
   g_object_notify(G_OBJECT(video_texture), "progress");
