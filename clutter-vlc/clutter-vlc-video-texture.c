@@ -101,6 +101,7 @@ clutter_vlc_set_uri(ClutterVlcVideoTexture* video_texture,
   ClutterVlcVideoTexturePrivate* priv;
   GObject* self;
   libvlc_media_t* vlc_media;
+  char media_arg[96];
 
   priv = video_texture->priv;
   self = G_OBJECT(video_texture);
@@ -128,6 +129,12 @@ clutter_vlc_set_uri(ClutterVlcVideoTexture* video_texture,
 
   vlc_media = libvlc_media_new(priv->vlc_instance,
 			       priv->uri, &priv->vlc_exception);
+  clutter_vlc_catch(&priv->vlc_exception);
+
+  sprintf(media_arg, ":clutter-texture=%lld",
+	  (long long int)(intptr_t)CLUTTER_TEXTURE(video_texture));
+
+  libvlc_media_add_option(vlc_media, media_arg, &priv->vlc_exception);
   clutter_vlc_catch(&priv->vlc_exception);
 
   priv->vlc_media_player =
@@ -489,22 +496,15 @@ static void
 clutter_vlc_video_texture_init(ClutterVlcVideoTexture* video_texture)
 {
   ClutterVlcVideoTexturePrivate* priv;
-  char clutter_texture[255];
   char const * vlc_argv[] =
     {
-/*       "-q", */
-/*       "-vvv", */
       "--ignore-config",
-/*       "--noaudio", */
       "--vout", "clutter",
-      "--clutter-texture", clutter_texture,
     };
   int vlc_argc = sizeof(vlc_argv) / sizeof(*vlc_argv);
 
   video_texture->priv = CLUTTER_VLC_VIDEO_TEXTURE_GET_PRIVATE(video_texture);
   priv = video_texture->priv;
-
-  sprintf(clutter_texture, "%lld", (long long int)(intptr_t)CLUTTER_TEXTURE(video_texture));
 
   libvlc_exception_init(&priv->vlc_exception);
   priv->vlc_instance = libvlc_new(vlc_argc, vlc_argv, &priv->vlc_exception);
