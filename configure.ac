@@ -2,7 +2,7 @@
 # An odd micro number indicates in-progress developmen
 # An even micro number indicates a released version.
 m4_define(clutter_vlc_major_version, 0)
-m4_define(clutter_vlc_minor_version, 9)
+m4_define(clutter_vlc_minor_version, 8)
 m4_define(clutter_vlc_micro_version, 0)
 
 m4_define([clutter_vlc_version],
@@ -74,7 +74,7 @@ AC_CHECK_FUNCS([memset munmap strcasecmp strdup])
 
 dnl ========================================================================
 
-pkg_modules="clutter-0.9 >= 0.9.0"
+pkg_modules="clutter-0.8 >= 0.8.0"
 PKG_CHECK_MODULES(CLUTTER_VLC, [$pkg_modules])
 
 dnl ========================================================================

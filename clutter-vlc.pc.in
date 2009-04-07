@@ -7,5 +7,5 @@ Name: clutter-vlc
 Description: Clutter Vlc integration
 Version: @VERSION@
 Libs: -L${libdir} -lclutter-vlc-@CLUTTER_VLC_MAJORMINOR@
-Cflags: -I${includedir}/clutter-0.9/clutter-vlc
-Requires: clutter-0.9 libvlc
+Cflags: -I${includedir}/clutter-0.8/clutter-vlc
+Requires: clutter-0.8 libvlc

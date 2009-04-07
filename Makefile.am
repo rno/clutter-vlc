@@ -2,15 +2,15 @@ SUBDIRS = clutter-vlc examples
 
 DIST_SUBDIRS = clutter-vlc examples
 
-clutter-vlc-0.9.pc: clutter-vlc.pc
-	@cp -f clutter-vlc.pc clutter-vlc-0.9.pc
+clutter-vlc-0.8.pc: clutter-vlc.pc
+	@cp -f clutter-vlc.pc clutter-vlc-0.8.pc
 
-pkgconfig_DATA = clutter-vlc-0.9.pc
+pkgconfig_DATA = clutter-vlc-0.8.pc
 pkgconfigdir   = $(libdir)/pkgconfig
 
 EXTRA_DIST = clutter-vlc.pc.in
 
-CLEANFILES = clutter-vlc-0.9.pc
+CLEANFILES = clutter-vlc-0.8.pc
 
 DISTCLEANFILES = clutter-vlc.pc
 

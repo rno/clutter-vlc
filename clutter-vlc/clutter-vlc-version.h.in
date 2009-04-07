@@ -30,9 +30,9 @@
 
 # define CLUTTER_VLC_MICRO_VERSION   (0)
 
-# define CLUTTER_VLC_VERSION         (0.9.0)
+# define CLUTTER_VLC_VERSION         (0.8.0)
 
-# define CLUTTER_VLC_VERSION_S       "0.9.0"
+# define CLUTTER_VLC_VERSION_S       "0.8.0"
 
 # define CLUTTER_VLC_VERSION_HEX     ((CLUTTER_VLC_MAJOR_VERSION << 24) | \
 				      (CLUTTER_VLC_MINOR_VERSION << 16) | \
