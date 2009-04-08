@@ -146,8 +146,20 @@ clutter_vlc_set_uri(ClutterVlcVideoTexture* video_texture,
 
   if (priv->vlc_media_player != NULL)
     {
-      libvlc_media_player_stop(priv->vlc_media_player, &priv->vlc_exception);
+      libvlc_state_t state;
+
+      state = libvlc_media_player_get_state(priv->vlc_media_player,
+					    &priv->vlc_exception);
       clutter_vlc_catch(&priv->vlc_exception);
+
+      if (state == libvlc_Opening || state == libvlc_Buffering ||
+	  state == libvlc_Forward || state == libvlc_Backward ||
+	  state == libvlc_Playing)
+	{
+	  libvlc_media_player_stop(priv->vlc_media_player, &priv->vlc_exception);
+	  clutter_vlc_catch(&priv->vlc_exception);
+	}
+
       libvlc_media_player_release(priv->vlc_media_player);
       priv->vlc_media_player = NULL;
       g_source_remove(priv->tick_timeout_id);
