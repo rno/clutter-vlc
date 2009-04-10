@@ -24,9 +24,11 @@
 #ifndef _HAVE_CLUTTER_VLC_MAIN_H
 # define _HAVE_CLUTTER_VLC_MAIN_H
 
+G_BEGIN_DECLS
 
 void	clutter_vlc_init(void);
 void	clutter_vlc_cleanup(void);
 
+G_END_DECLS
 
 #endif /* _HAVE_CLUTTER_VLC_MAIN_H */
